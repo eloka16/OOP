@@ -4,9 +4,9 @@ var chai = require('chai');
 var assert = chai.assert;
 
 
-var person = require('./lib/oop.js').person;
+var Person = require('./lib/oop.js').Person;
 var Emloyee = require('./lib/oop.js').Employee;
-var Cleaner = require('./lib/oop.js').cleaner; 
+var Cleaner = require('./lib/oop.js').Cleaner; 
 
 
 
@@ -15,8 +15,8 @@ var Cleaner = require('./lib/oop.js').cleaner;
   describe("create a person class with first and last name", function() {
 
     it("The person should have a firstname", function() {
-      var john = new person('John','Smith',30);   
-      expect(person.firstname).toBe('John');
+      var john = new Person('John','Smith',30);   
+      expect(john.firstname).toBe('John');
     });
     /*it("The person should have a last name", function() {
         var employer = new person("Esther","Jules");
