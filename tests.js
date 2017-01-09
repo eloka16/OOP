@@ -25,6 +25,7 @@ var Cleaner = require('./lib/oop.js').Cleaner;
         expect(john.isAlive).toBe(true);
     })
   
+  //encapsulation
     it("The person class should have a private variable of Bank balance", function() {
         expect(john.returnBalance).toBe(undefined);
     })
@@ -46,6 +47,8 @@ var Cleaner = require('./lib/oop.js').Cleaner;
        })
    })
 
+
+//inheritance
   describe("create a prototype class of person called cleaner", function() {
       var myCleaner = new Cleaner("Tolu","Dada"); 
       it("The cleaner class should have a property of single", function() {
