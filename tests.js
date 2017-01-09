@@ -15,16 +15,13 @@ var Cleaner = require('./lib/oop.js').Cleaner;
   describe("create a person class with first and last name", function() {
       var john = new Person('John', 'Smith', 2);
 
-    it("The person should have a firstname", function() {
-      //var john = new Person('John','Smith',30);   
+    it("The person should have a firstname", function() {   
       expect(john.firstname).toEqual('John');
     });
     it("The person should have a last name", function() {
-        //var esther = new Person("Esther","Jules");
         expect(john.lastname).toEqual('Smith');
     })
     it("The person should have a property of alive", function(){
-        //var tolu = new Person('tolu','we');
         expect(john.isAlive).toBe(true);
     })
   
@@ -34,7 +31,7 @@ var Cleaner = require('./lib/oop.js').Cleaner;
     it("The person class should have a private method", function() {
         var myBalanceMethod = john.askTeller();
         var myBalance = myBalanceMethod();
-        expect(myBalance).teEqual(7500)
+        expect(myBalance).toEqual(7500);
     })
     
 
@@ -44,20 +41,22 @@ var Cleaner = require('./lib/oop.js').Cleaner;
        it("The employer class should also have a first and last name", function() {
            expect(newEmployee.firstname).toEqual('Esther')
        })
-       /*it("The employer class should have 2 legs", function() {
-           expect(employer.numLegs).toBe(2);
-       })*/
+       it("The employer class should have 2 legs", function() {
+           expect(newEmployee.numLegs).toBe(2);
+       })
    })
 
-  /*describe("create a prototype class of person called cleaner", function() {
+  describe("create a prototype class of person called cleaner", function() {
+      var myCleaner = new Cleaner("Tolu","Dada"); 
       it("The cleaner class should have a property of single", function() {
-          expect(cleaner.status).toEqual('single');
+          expect(myCleaner.status).toEqual('single');
       })
       it("The cleaner should inherit from alive property from the person class", function() {
-          expect(cleaner.isAlive).toBe(true);
+          expect(myCleaner.isAlive).toBe(true);
       })
       it("The cleaner class inherit numLegs from the employer class", function() {
-          expect(cleaner.numLegs).toBe(2)
-      })*/
+          expect(myCleaner.numLegs).toBe(2)
+      })
+  })
   })
 })();
